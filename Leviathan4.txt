@@ -1,0 +1,28 @@
+#Level 4
+
+
+#log in and use the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan4
+
+vuH0coox6m
+
+#we see a trash file so lets dig into it
+#we can use cd .trash since ./trash will not work
+
+cd .trash
+
+#we are in, let's ls -la to see whats in the trash file
+
+ls -la
+
+#there is a bin in the trash....
+#lets see whats in the trash bin
+
+./bin
+
+#there is a binary output that we can decode
+# " 01010100 01101001 01110100 01101000 00110100 01100011 01101111 01101011 01100101 01101001 00001010"
+#Using Binary to Ascii Text Converter site http://www.binaryhexconverter.com/binary-to-ascii-text-converter
+#the output reads " Tith4cokei "
+
