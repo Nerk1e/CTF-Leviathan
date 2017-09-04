@@ -1,0 +1,55 @@
+#Level 1
+
+#lets log into the ssh with the new password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan1
+
+rioGegei8m
+
+#lets see if we can snoop around like the first level using ls -la
+
+ls -la
+
+#there is a file that is highlighted in red saying "check"
+#lets cd check to see what's inside it
+
+cd check
+
+#that didnt work, so lets ./check
+
+./check
+
+#it's asking for a password
+#typing in leviathan1 doesn't work so we may need to look around
+#let's try ltrace ./check that can show 
+#the background string code that is looking
+#for the password
+
+ltrace ./check
+
+#it is showing the code and asking for the password again.
+#when you put in the wrong code it shows the password it is looking for in
+#the " strcmp " which stands for string to compare, and it is comparing 
+#the bad password I typed in, with the right password which is " sex " 
+#so lets ./check again and type in the right password
+
+./check
+
+sex
+
+#the section up next is blank so we need to see the user.
+#to see who the user is that we are logged in as
+#you can use " id " or "whoami"
+#I'll use " id "
+
+id
+
+#now it shows 
+#" uid=12001(leviathan1) gid=12001(leviathan1) euid=12002(leviathan2) groups=12002(leviathan2),12001(leviathan1) "
+#this shows the users who were last in
+#similar to the first level, lets cat the "/etc/leviathan_pass"
+#and see if anything is in leviathan2 since it is showing up in the 2nd userid
+
+cat /etc/leviathan_pass/leviathan2
+
+#it shows a password " ougahZi8Ta "
