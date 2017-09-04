@@ -1,0 +1,47 @@
+
+#Level 3
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan3
+
+Ahdiemoo1j
+
+#well this is a very short and unique level
+#if we ls -la it 
+#it will show level3 file
+
+ls -la
+
+#if we type ./level3 it will ask for a password
+
+./level3
+
+#we do not know the password
+
+ltrace
+
+#if we ltrace then it will show the code and have strcmp("h0no33", "kakaka") 
+#type kakaka for password
+
+kakaka
+
+#it will be wrong and then it will show strcmp("kakaka\n", "snlprintf\n")   
+#if you type snlprintf it will say correct and say
+# puts("[You've got shell]!"[You've got shell]!
+
+snlprintf
+
+#so snlprintf seems to be the password needed to open ./level3
+#type ./level3 and put the password in then ask whoami
+
+./level3
+
+whoami
+
+#typing in whoami will show the username leviathan4
+#then type cat /etc/leviathan_pass/leviathan4 for password to next level
+
+cat /etc/leviathan_pass/leviathan4
+
+#password is vuH0coox6m
+
+
