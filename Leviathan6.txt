@@ -1,0 +1,37 @@
+
+#Level 6
+
+#before logging in, make sure to download nano " sudo apt-get install nano "
+#Log into the level and put in the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan6
+
+UgaoFee4li
+
+
+#let's see what's in here with ls -la
+
+ls -la
+
+#we see leviathan6 file similar to what level5 had
+#i did ./leviathan6
+
+./leviathan6
+
+#it is asking for a 4 digit code we don't have
+#trying to cd into it will not work
+#using ltrace we can see there is " <4 digit code> "
+#we may need to make a tmp file to work around into it using script
+#so far kali linux does not like nano sh so needed to write a manual script
+
+for i in {0000..9999}; do ./leviathan6 $i; done
+
+#this makes us look through the code for specific pins between 0000-9999 to find for the 4 digit
+#if we type whoami it will let us know we are now inside the leviathan7 file
+#if we cat the password, we can cat for the password now
+
+cat /etc/leviathan_pass/leviathan7
+
+#password is ahy7MaeBo9
+
+#We are here. We finally got to level 7
