@@ -1,0 +1,24 @@
+#Level 7
+
+
+#Let's log in one final time with the ssh and password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan7
+
+ahy7MaeBo9
+
+#Let's ls -la
+
+ls -la
+
+#there is a final file called CONGRATULATIONS
+#Let's see if anything is in it with cat
+
+cat CONGRATULATIONS
+
+#This is what it says
+#Well Done, you seem to have used a *nix system before, now try something more serious.
+#(Please don't post writeups, solutions or spoilers about the games on the web. 
+#Thank you!)
+
+#ehhhhh.... Well we finished. :)
