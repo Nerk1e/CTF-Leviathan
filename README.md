@@ -319,7 +319,7 @@ ls -la
 for i in {0000..9999}; do ./leviathan6 $i; done
 
 #this makes us look through the code for specific pins between 0000-9999 to find for the 4 digit
-#if we type whoami it will let us know we are now inside the leviathan6 file
+#if we type whoami it will let us know we are now inside the leviathan7 file
 #if we cat the password, we can cat for the password now
 
 cat /etc/leviathan_pass/leviathan7
