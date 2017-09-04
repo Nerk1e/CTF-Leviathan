@@ -1,0 +1,26 @@
+#Level 5
+
+
+#log in and use the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan5
+
+Tith4cokei
+
+#now that we are logged in, lets take a look around
+
+ls -la
+
+#we see a highlighted file called leviathan5
+#we cannot get in as easily as the last level with cd or ./ 
+#so we need to go another route
+#we do see that there is a /tmp/file.log so that is a clue
+#we are making a symlink taking the tmp file and looking for the password in leviathan6
+
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+#now lets see if there is a code like last file with ./ and use the leviathan5 file
+
+./leviathan5
+
+#we got a password " UgaoFee4li "
