@@ -183,3 +183,176 @@ ls -la
 Ahdiemoo1j
 
 ```
+
+```markdown
+#Level 3
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan3
+
+Ahdiemoo1j
+
+#well this is a very short and unique level
+#if we ls -la it 
+#it will show level3 file
+
+ls -la
+
+#if we type ./level3 it will ask for a password
+
+./level3
+
+#we do not know the password
+
+ltrace
+
+#if we ltrace then it will show the code and have strcmp("h0no33", "kakaka") 
+#type kakaka for password
+
+kakaka
+
+#it will be wrong and then it will show strcmp("kakaka\n", "snlprintf\n")   
+#if you type snlprintf it will say correct and say
+# puts("[You've got shell]!"[You've got shell]!
+
+snlprintf
+
+#so snlprintf seems to be the password needed to open ./level3
+#type ./level3 and put the password in then ask whoami
+
+./level3
+
+whoami
+
+#typing in whoami will show the username leviathan4
+#then type cat /etc/leviathan_pass/leviathan4 for password to next level
+
+cat /etc/leviathan_pass/leviathan4
+
+#password is vuH0coox6m
+```
+
+```markdown
+#Level 4
+
+
+#log in and use the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan4
+
+vuH0coox6m
+
+#we see a trash file so lets dig into it
+#we can use cd .trash since ./trash will not work
+
+cd .trash
+
+#we are in, let's ls -la to see whats in the trash file
+
+ls -la
+
+#there is a bin in the trash....
+#lets see whats in the trash bin
+
+./bin
+
+#there is a binary output that we can decode
+# " 01010100 01101001 01110100 01101000 00110100 01100011 01101111 01101011 01100101 01101001 00001010"
+#Using Binary to Ascii Text Converter site http://www.binaryhexconverter.com/binary-to-ascii-text-converter
+#the output reads " Tith4cokei "
+```
+
+```markdown
+#Level 5
+
+
+#log in and use the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan5
+
+Tith4cokei
+
+#now that we are logged in, lets take a look around
+
+ls -la
+
+#we see a highlighted file called leviathan5
+#we cannot get in as easily as the last level with cd or ./ 
+#so we need to go another route
+#we do see that there is a /tmp/file.log so that is a clue
+#we are making a symlink taking the tmp file and looking for the password in leviathan6
+
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+#now lets see if there is a code like last file with ./ and use the leviathan5 file
+
+./leviathan5
+
+#we got a password " UgaoFee4li "
+```
+
+```markdown
+#Level 6
+
+#before logging in, make sure to download nano " sudo apt-get install nano "
+#Log into the level and put in the password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan6
+
+UgaoFee4li
+
+
+#let's see what's in here with ls -la
+
+ls -la
+
+#we see leviathan6 file similar to what level5 had
+#i did ./leviathan6
+
+./leviathan6
+
+#it is asking for a 4 digit code we don't have
+#trying to cd into it will not work
+#using ltrace we can see there is " <4 digit code> "
+#we may need to make a tmp file to work around into it using script
+#so far kali linux does not like nano sh so needed to write a manual script
+
+for i in {0000..9999}; do ./leviathan6 $i; done
+
+#this makes us look through the code for specific pins between 0000-9999 to find for the 4 digit
+#if we type whoami it will let us know we are now inside the leviathan6 file
+#if we cat the password, we can cat for the password now
+
+cat /etc/leviathan_pass/leviathan7
+
+#password is ahy7MaeBo9
+
+#We are here. We finally got to level 7
+```
+
+
+```markdown
+#Level 7
+
+
+#Let's log in one final time with the ssh and password
+
+ssh leviathan.labs.overthewire.org -p2223 -l leviathan7
+
+ahy7MaeBo9
+
+#Let's ls -la
+
+ls -la
+
+#there is a final file called CONGRATULATIONS
+#Let's see if anything is in it with cat
+
+cat CONGRATULATIONS
+
+#This is what it says
+#Well Done, you seem to have used a *nix system before, now try something more serious.
+#(Please don't post writeups, solutions or spoilers about the games on the web. 
+#Thank you!)
+
+#ehhhhh.... We finished. :)
+```
