@@ -181,8 +181,10 @@ ls -la
 #it worked and now we got the password
 
 Ahdiemoo1j
-
 ```
+
+![leviathan6](https://user-images.githubusercontent.com/31230311/30040206-15c3b862-91aa-11e7-9e85-9e5fcaba3d3b.png)
+
 
 ```markdown
 #Level 3
@@ -231,6 +233,9 @@ cat /etc/leviathan_pass/leviathan4
 #password is vuH0coox6m
 ```
 
+![leviathan7](https://user-images.githubusercontent.com/31230311/30040216-3b34c3fc-91aa-11e7-8db6-0408a191646b.png)
+
+
 ```markdown
 #Level 4
 
@@ -261,6 +266,9 @@ ls -la
 #the output reads " Tith4cokei "
 ```
 
+![leviathan8](https://user-images.githubusercontent.com/31230311/30040221-46527586-91aa-11e7-83dc-69474c26c7c8.png)
+
+
 ```markdown
 #Level 5
 
@@ -289,6 +297,8 @@ ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
 
 #we got a password " UgaoFee4li "
 ```
+
+![leviathan9](https://user-images.githubusercontent.com/31230311/30040225-54844490-91aa-11e7-8cdb-5e7dfc5cf9fc.png)
 
 ```markdown
 #Level 6
@@ -328,6 +338,8 @@ cat /etc/leviathan_pass/leviathan7
 
 #We are here. We finally got to level 7
 ```
+
+![leviathan9 2](https://user-images.githubusercontent.com/31230311/30040227-5b6500d8-91aa-11e7-945b-468ba0725426.png)
 
 
 ```markdown
